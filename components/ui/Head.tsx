@@ -2,11 +2,12 @@
 
 import * as React from "react";
 import Link from "next/link";
+import ModeToggle from "@/components/Toggle";
 
 import { cn } from "@/lib/utils";
 // import { Icons } from "@/components/icons"
-import { gallery } from '../../sanity/schemas/gallery';
-import Image from 'next/image';
+import { gallery } from "../../sanity/schemas/gallery";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -30,20 +31,24 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "For sighted users to preview content available behind a link.",
   },
-  
-  
 ];
 
 export function Head() {
   return (
-    <div className="p-5 bg-gray-100 flex justify-evenly content-center  items-center">
+    <div className="p-5 bg-gray-100 flex justify-evenly content-center  items-center dark:bg-gray-800 dark:text-white">
       <Link href="/">
-        <Image src={"/img/logo.png"} height={100} width={200} alt="logo" className="h-12 object-cover"/>
+        <Image
+          src={"/img/logo.png"}
+          height={100}
+          width={200}
+          alt="logo"
+          className="h-12 object-cover"
+        />
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className=" bg-gray-100 font-semibold">
+            <NavigationMenuTrigger className=" bg-gray-100 dark:bg-slate-700 font-semibold">
               Home
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -76,7 +81,7 @@ export function Head() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className=" bg-gray-100 font-semibold">
+            <NavigationMenuTrigger className=" bg-gray-100 dark:bg-slate-700 font-semibold">
               OUR TOURS
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -111,7 +116,7 @@ export function Head() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className=" bg-gray-100 font-semibold">
+            <NavigationMenuTrigger className="dark:bg-slate-700 bg-gray-100 font-semibold">
               gallery
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -130,7 +135,7 @@ export function Head() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-  
+      <ModeToggle />
     </div>
   );
 }
