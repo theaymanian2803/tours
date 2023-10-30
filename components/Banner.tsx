@@ -44,15 +44,14 @@ const BannerSlider: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full shadow-lg">
-      <div className="relative">
+    <div className="w-full  shadow-lg">
+      <div className="relative ">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
             className={`absolute w-full h-[600px] transition-opacity duration-500 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
-          >
+            }`}>
             <Image
               src={slide.imageUrl}
               alt={slide.caption}
@@ -70,14 +69,12 @@ const BannerSlider: React.FC = () => {
         ))}
         <button
           className="absolute left-0 top-5 transform -translate-y-1/2 text-white bg-blue-500 px-4 py-2 rounded-r-md"
-          onClick={prevSlide}
-        >
+          onClick={prevSlide}>
           Previous
         </button>
         <button
           className="absolute right-0 top-5 transform -translate-y-1/2 text-white bg-blue-500 px-4 py-2 rounded-l-md"
-          onClick={nextSlide}
-        >
+          onClick={nextSlide}>
           Next
         </button>
       </div>

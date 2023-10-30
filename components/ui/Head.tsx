@@ -20,16 +20,15 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Book Now",
+    href: "/book",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "please make sure to read all the content to understand how booking works",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
+    title: "galley",
+    href: "/gallery",
+    description: "quick preview of our clients having fun during there camp",
   },
 ];
 
@@ -57,8 +56,7 @@ export function Head() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
+                      href="/">
                       {/* <Icons.logo className="h-6 w-6" /> */}
                       <div className="mb-2 mt-4 text-lg font-medium">TOURS</div>
                       <p className="text-sm leading-tight text-muted-foreground">
@@ -71,10 +69,10 @@ export function Head() {
                 <ListItem href="/about" title="About Us">
                   about us
                 </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
+                <ListItem href="/book" title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
+                <ListItem href="/gallery" title="Typography">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -90,16 +88,16 @@ export function Head() {
                   <NavigationMenuLink asChild>
                     <a
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
+                      href="/">
                       {/* <Icons.logo className="h-6 w-6" /> */}
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Marrakech
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components built with Radix UI and
-                        Tailwind CSS.
-                      </p>
+                      <div className="mb-2 w-full text-center">Marrakech</div>
+                      <Image
+                        className=" w-full h-full object-cover drop-shadow-lg rounded-md aspect-square hover:scale-110  hover:shadow-lg transition "
+                        alt="text"
+                        src="/boat.png"
+                        width={500}
+                        height={300}
+                      />
                     </a>
                   </NavigationMenuLink>
                 </li>
@@ -125,8 +123,7 @@ export function Head() {
                   <ListItem
                     key={component.title}
                     title={component.title}
-                    href={component.href}
-                  >
+                    href={component.href}>
                     {component.description}
                   </ListItem>
                 ))}

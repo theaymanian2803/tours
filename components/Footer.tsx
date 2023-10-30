@@ -23,43 +23,45 @@ const links = [
 
 function Footer() {
   return (
-    <footer className="bg-slate-200 text-gray-800 dark:bg-slate-800 dark:text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="">
-          <h2 className="text-2xl font-semibold mb-4">Company Name</h2>
-          <p className="mb-4">123 Main Street</p>
-          <p className="mb-4">City, State ZIP</p>
-          <p className="mb-4">Phone: (123) 456-7890</p>
-          <p>Email: info@example.com</p>
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Useful Links</h2>
-          <ul className="flex flex-col">
-            {links.map((link) => (
-              <Link key={link.title} href={link.href}>
-                {link.title}
-              </Link>
-            ))}
-          </ul>
-        </div>
-
-        <div className="relative text-center h-11 flex">
-          <Image
-            src="/img/logo.png"
-            width={300}
-            height={300}
-            alt="Company Logo"
-            className="mx-auto absolute mb-4 w-24 h-24"
-          />
-          <h3 className=" font-semibold underline tracking-widest">
-            don&apos;t hesitate to call us at{" "}
-          </h3>
-        </div>
-      </div>
-      <div className="bg-slate-100 h-46 text-center">
-        <p className="text-lg">&copy; 2023 Company Name</p>
-      </div>
+    <footer className="footer p-10 bg-base-200 text-base-content">
+      <nav>
+        <header className="footer-title">Services</header>
+        <a className="link link-hover">Branding</a>
+        <a className="link link-hover">Design</a>
+        <a className="link link-hover">Marketing</a>
+        <a className="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <header className="footer-title">Company</header>
+        <a className="link link-hover">About us</a>
+        <a className="link link-hover">Contact</a>
+        <a className="link link-hover">Jobs</a>
+        <a className="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <header className="footer-title">Legal</header>
+        <a className="link link-hover">Terms of use</a>
+        <a className="link link-hover">Privacy policy</a>
+        <a className="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <header className="footer-title">Newsletter</header>
+        <fieldset className="form-control w-80">
+          <label className="label">
+            <span className="label-text">Enter your email address</span>
+          </label>
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              className="input input-bordered w-full pr-16"
+            />
+            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+              Subscribe
+            </button>
+          </div>
+        </fieldset>
+      </form>
     </footer>
   );
 }

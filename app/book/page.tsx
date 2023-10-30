@@ -1,21 +1,33 @@
 import React from "react";
 import Image from "next/image";
+import BookForm from "@/components/BookForm";
 
 function BookNow() {
   return (
     <div>
-      <div className="w-full h-[800px] relative">
-        <Image
-          src="/trave.jpg"
-          alt="banner"
-          fill
-          className=" object-cover relative"
-        />
+      <div
+        className="hero h-96"
+        style={{
+          backgroundImage:
+            "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+        }}>
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <p className="mb-5">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
+        </div>
       </div>
 
       <div className="container flex flex-col justify-center items-center mx-auto text-center mt-9">
         <h1>BOOK NOW</h1>
-        <p className=" text-center font-bold tracking-wider text-xl w-4/5 md:text-start p-5  ">
+        <p className=" text-center font-semibold text-gray-600 tracking-wider text-xl w-4/5  p-5  ">
           Itching to start planning your next trip? Request your tailor made
           journey to Morocco by sending us some basic info and we’ll be in touch
           to help you weave your own magic carpet ride through this marvellous
@@ -25,9 +37,9 @@ function BookNow() {
           (THIS IS A FREE SERVICE. NO CREDIT CARD NEEDED)
         </h3>
       </div>
-      <div className=" container mx-auto mt-3 bg-white w-6/12 h-[700px]">
+      {/* <div className=" container mx-auto mt-3 bg-white w-6/12 h-[700px]">
         form goes here
-      </div>
+      </div> */}
       <div className=" h-auto p-5 mt-8 bg-black opacity-90 md:h-[400px]  w-full flex justify-center items-center flex-col ">
         <h1 className="text-white font-bold">Absolutely Fabulous </h1>
         <span className=" text-blue-800 text-sm">Tris Zainol Abidin</span>
@@ -41,17 +53,26 @@ function BookNow() {
           <span className=" font-bold text-xl text-blue-700 tracking-widest">
             Morocco
           </span>{" "}
-          .
         </p>
       </div>
-      <div className="flex justify-center w-full bg-slate-500 h-[800px]">
-        <div className="basis-2/5 justify-center items-center flex border-emerald-600 border-8 w-[400px]">
-          img goes here
+      <div className=" h-auto  md:flex justify-center items-center  p-10 md:h-[800px]">
+        <div className=" max-w-2xl flex items-center justify-center h-[300px] ">
+          <Image
+            className=" h-full  object-cover"
+            src="/img-1.png"
+            alt="img"
+            width={800}
+            height={600}
+          />
         </div>
-        <div className="basis-2/5 w-[400px] border-emerald-800 border-8 flex justify-center items-center  flex-col">
-          <h3>JOANNE WEIR INTERNATIONAL CULINARY GROUP TOUR.</h3>
-          <h1>Private Morocco Tour.</h1>
-          <p className=" w-2/4">
+        <div className=" p-8  flex flex-col justify-center shadow-lg  md:p-5 items-center max-w-2xl text-center lg-[300px]">
+          <h3 className=" text-blue-600 font-bold mt-16">
+            JOANNE WEIR INTERNATIONAL CULINARY GROUP TOUR.
+          </h3>
+          <h1 className=" font-semibold text-gray-600">
+            Private Morocco Tour.
+          </h1>
+          <p className=" text-gray-800">
             For the American award-winning cookbook author, food writer, cooking
             teacher, professional & celebrity chef Joanne Weir we organised an
             exceptional trip to Marrakech enriched with authentic insider
@@ -62,6 +83,9 @@ function BookNow() {
             region.
           </p>
         </div>
+      </div>
+      <div className=" pb-10">
+        <BookForm />
       </div>
     </div>
   );
