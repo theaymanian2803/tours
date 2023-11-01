@@ -6,19 +6,19 @@ const slides = [
     id: 1,
     imageUrl: "/img/a.jpg",
     caption: "join our community ",
-    btn: "lean more",
+    btn: "View More",
   },
   {
     id: 2,
     imageUrl: "/img/b.jpg",
     caption: "Slide 2",
-    btn: "lean more",
+    btn: "View More",
   },
   {
     id: 3,
     imageUrl: "/img/c.jpg",
     caption: "Slide 3",
-    btn: "lean more",
+    btn: "View More",
   },
 ];
 
@@ -59,9 +59,11 @@ const BannerSlider: React.FC = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center flex-col">
-              <h2 className="text-4xl font-bold text-white">{slide.caption}</h2>
+              <h2 className="text-4xl bg-blue-100 p-32 w-2/4 opacity-80 shadow-lg drop-shadow-lg text-center font-bold text-black mb-5">
+                {slide.caption}
+              </h2>
               <br />
-              <button className="text-4xl font-bold bg-blue-700 opacity-90 shadow-lg p-2 rounded-lg tracking-2 text-white">
+              <button className="text-4xl font-bold bg-blue-700 opacity-80 tracking-widest shadow-lg p-4  rounded-lg tracking-2 text-white">
                 {slide.btn}
               </button>
             </div>

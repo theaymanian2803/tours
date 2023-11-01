@@ -1,6 +1,6 @@
 function BookForm() {
   return (
-    <div className=" relative">
+    <div className=" relative z-30">
       <div className="drawer drawer-end relative">
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
         <div
@@ -17,8 +17,8 @@ function BookForm() {
           </div>
           <label
             htmlFor="my-drawer-4"
-            className="drawer-button btn btn-primary fixed top-5 left-10  z-30">
-            Contact us
+            className="drawer-button btn btn-primary fixed top-5 left-5  z-30">
+            Book Now
           </label>
         </div>
         <div className="drawer-side">
