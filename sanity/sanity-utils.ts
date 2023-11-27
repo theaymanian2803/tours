@@ -22,7 +22,8 @@ export async function getProjects(): Promise<Posts[]> {
       _id,
       createdAt,
       title,
-      author,
+      author->,
+      categories[]->,
       "slug": slug.current,
       "mainImage" : mainImage.asset->url,
     }`;
@@ -31,19 +32,19 @@ export async function getProjects(): Promise<Posts[]> {
 }
 
 export async function getProject(slug: string): Promise<Posts> {
-
   const query = groq`*[_type == "post" && slug.current == $slug][0]{
       _id,
       createdAt,
       title,
-      author,
+       author->,
+       categories[]->,
       "slug": slug.current,
       body,
       "mainImage" : mainImage.asset->url,
-    }`
-    
-    return client.fetch(query , {slug} ,{next :{revalidate: 60}})
-    }
+    }`;
+
+  return client.fetch(query, { slug }, { next: { revalidate: 60 } });
+}
 
     // { next: { revalidate: 10 } }
   

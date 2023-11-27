@@ -2,6 +2,7 @@ import { getProject } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponent } from "@/components/RichTextComponent";
+import urlFor from "@/sanity/sanity-utils";
 
 type Props = {
   params: {
@@ -18,7 +19,7 @@ async function Post({ params }: Props) {
     <>
       <div className="relative h-96 shadow-lg hover:opacity-90 cursor-pointer  transition">
         <Image
-          src={post.mainImage}
+          src={urlFor(post.mainImage).url()}
           alt={post.slug}
           layout="fill"
           className="w-full h-full object-cover "

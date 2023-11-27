@@ -21,14 +21,14 @@ const Newsletter = () => {
         <input
           type="email"
           placeholder="Your email address"
-          className="py-2 px-3 mr-2 w-64 border rounded-lg focus:outline-none focus:border-blue-500"
+          className="py-2 px-3 mr-2 w-64 border rounded-lg focus:outline-none focus:border-orange-500"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg">
+          className="bg-orange-500 hover:bg-orange-800 transition text-white font-semibold py-2 px-4 rounded-lg">
           Subscribe
         </button>
       </form>

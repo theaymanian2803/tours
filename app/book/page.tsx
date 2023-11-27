@@ -1,8 +1,16 @@
-import React from "react";
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import BookForm from "@/components/BookForm";
 
 function BookNow() {
+  const [open, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsOpen(!open);
+  }, []);
+
   return (
     <div>
       <div
@@ -13,14 +21,23 @@ function BookNow() {
         }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
+          <div className="max-w-md flex flex-col justify-center items-center">
             <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
             <p className="mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="my-drawer-4 relative border hover:border-sky-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-14 w-56 rounded-md bg-sky-orange-500 p-2 flex justify-center items-center font-extrabold">
+              <div className="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-800 delay-150 group-hover:delay-100"></div>
+              <div className="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-700 delay-150 group-hover:delay-150"></div>
+              <div className="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-600 delay-150 group-hover:delay-200"></div>
+              <p className="z-10">
+                <label htmlFor="my-drawer-4" className="drawer-button">
+                  BOOK NOW
+                </label>
+              </p>
+            </button>
           </div>
         </div>
       </div>
