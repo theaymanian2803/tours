@@ -61,19 +61,11 @@ const BannerSlider: React.FC = () => {
               fill
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 w-full  md:bottom-[-150px]  ">
-              <h2 className="text-2xl line-clamp-3 bg-orange-800 p-10 w-2/4 opacity-95 shadow-lg  text-center font-semibold capitalize text-black rounded-2xl mb-5">
+            <div className="absolute inset-0 w-full  md:bottom-[150px]  ">
+              <h2 className="text-2xl line-clamp-3 bg-orange-500 p-10 w-2/4 opacity-95 shadow-lg  text-center font-semibold capitalize text-black rounded-2xl mb-5">
                 {slide.caption}
               </h2>
               <br />
-              {/* <button className="relative mt-9 mb-5 border hover:border-orange-600 duration-500 group cursor-pointer text-sky-50  overflow-hidden h-14 w-56 rounded-md bg-orange-800 p-2 flex justify-center items-center font-extrabold">
-                <div className="absolute z-10 w-48 h-48 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-900 delay-150 group-hover:delay-75"></div>
-                <div className="absolute z-10 w-40 h-40 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-800 delay-150 group-hover:delay-100"></div>
-                <div className="absolute z-10 w-32 h-32 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-700 delay-150 group-hover:delay-150"></div>
-                <div className="absolute z-10 w-24 h-24 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-600 delay-150 group-hover:delay-200"></div>
-                <div className="absolute z-10 w-16 h-16 rounded-full group-hover:scale-150 transition-all  duration-500 ease-in-out bg-orange-500 delay-150 group-hover:delay-300"></div>
-                <p className="z-10">{slide.btn}</p>
-              </button> */}
             </div>
           </div>
         ))}

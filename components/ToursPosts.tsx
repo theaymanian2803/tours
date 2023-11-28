@@ -13,14 +13,14 @@ const ToursPosts = async () => {
           <div
             key={post._id}
             className=" relative flex justify-center text-center items-center shadow-md  rounded-lg bg-slate-150 dark:bg-gray-800 overflow-hidden">
-            <div className=" cursor-pointer  h-[750px] text-blue-600  p-4 rounded-lg flex flex-col text-center justify-evenly ">
+            <div className=" cursor-pointer  h-[750px] text-blue-600   rounded-lg flex flex-col text-center justify-evenly ">
               <div className=" flex items-center justify-center">
                 <Image
                   src={urlFor(post.mainImage).url()}
                   width={300}
                   height={300}
                   alt={post._id}
-                  className="w-96 h-48 object-cover rounded-lg hover:scale-105 hover:shadow-lg transition "
+                  className="w-full h-[260px]  opacity-80 hover:opacity-100 object-cover rounded-lg hover:scale-105 hover:shadow-lg transition "
                 />
               </div>
               <div className="p-4">
@@ -35,14 +35,16 @@ const ToursPosts = async () => {
                     <div className=" text-center p-11 text-black font-semibold rounded-md w-full ">
                       {post.categories.map((cat) => (
                         <div key={cat._id}>
-                          <h3>{cat.title}</h3>
+                          <h3 className=" font-bold  text-orange-500 uppercase tracking-wider">
+                            {cat.title}
+                          </h3>
                           <p>{cat.description}</p>
                         </div>
                       ))}
                     </div>
                   </div>
                 </>
-                <div className=" flex justify-between items-center">
+                <div className=" flex justify-between items-center mb-5">
                   {
                     <Image
                       className=" h-10 w-10 rounded-full border-4 border-orange-600"
@@ -55,13 +57,13 @@ const ToursPosts = async () => {
 
                   <Link
                     href={`/posts/${post.slug}`}
-                    className="mt-2 inline-block text-blue-100 hover:underline bg-orange-600 p-2 rounded-lg ">
+                    className="mt-2 inline-block text-blue-100 hover:bg-orange-900 bg-orange-600 p-2 rounded-lg ">
                     Read More
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 p-10 w-full bg-blue-500 h-10 shadow-lg">
+            <div className="absolute bottom-0 p-10 w-full bg-orange-300 hover:bg-orange-500 transition h-10 shadow-lg mt-8">
               <div className="flex text-center items-center justify-between  text-white font-bold mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +82,8 @@ const ToursPosts = async () => {
           </div>
         ))}
       </div>
-      <div className="   text-white text-center mx-auto">
-        <button className=" bg-orange-700 hover:bg-red-600 transition p-4 rounded-xl drop-shadow-md shadow-lg ">
+      <div className="   text-black text-center mx-auto font-bold">
+        <button className=" bg-orange-200 hover:bg-orange-600 transition p-4 rounded-xl drop-shadow-md shadow-lg ">
           SEE ALL EXCURSIONS
         </button>
       </div>

@@ -2,12 +2,12 @@ function Test() {
   return (
     <>
       <div>
-        <h1 className=" text-5xl text-orange-500 opacity-80">
+        <h1 className=" text-2xl md:text-5xl text-orange-500 opacity-80">
           Find the Perfect Package for Luxury Glamping in Morocco
         </h1>
       </div>
 
-      <div className=" container flex justify-center items-center gap-10">
+      <div className=" container md:flex justify-center items-center gap-10">
         <p className=" font-semibold text-gray-600 text-start leading-7 ">
           Merzouga Luxury Desert Camp is your special home in Morocco. It
           demands nothing much of you, but to relax and gaze at the
