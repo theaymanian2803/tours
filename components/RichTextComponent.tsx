@@ -29,30 +29,28 @@ export const RichTextComponent = {
   },
   block: {
     h1: ({ children }: any) => (
-      <h1 className="text-5xl text-red-700 shadow-lg rounded-md py-10 font-semibold">
-        {children}
-      </h1>
+      <h1 className="text-5xl text-orange-500  py-10 font-bold">{children}</h1>
     ),
     h2: ({ children }: any) => (
-      <h2 className="text-4xl text-red-700 shadow-lg rounded-md py-10 font-semibold">
+      <h2 className="text-4xl text-orange-500 rounded-md py-10 font-semibold">
         {children}
       </h2>
     ),
     h3: ({ children }: any) => (
-      <h3 className="text-3xl text-red-700 shadow-lg rounded-md py-10 font-semibold">
+      <h3 className="text-3xl text-orange-500 rounded-md py-10 font-semibold">
         {children}
       </h3>
     ),
     h4: ({ children }: any) => (
-      <h4 className="text-2xl text-blue-600  shadow-lg rounded-md drop-shadow-sm py-10 font-semibold">
+      <h4 className="text-2xl text-orange-500 shadow-lg rounded-md drop-shadow-sm py-10 font-semibold">
         {children}
       </h4>
     ),
     p: ({ children }: any) => (
-      <p className="text-2xl py-10 font-semibold text-gray-100">{children}</p>
+      <p className="text-2xl py-10 font-semibold text-gray-400">{children}</p>
     ),
     blockquote: ({ children }: any) => (
-      <blockquote className=" border-l-blue-700 border-l-4 py-7 my-7">
+      <blockquote className=" border-l-orange-500 border-l-4 py-7 my-7">
         {children}
       </blockquote>
     ),
@@ -67,7 +65,7 @@ export const RichTextComponent = {
         <Link
           href={value.href}
           rel={rel}
-          className=" underline decoration-blue-800 hover:decoration-black transition">
+          className=" underline decoration-orange-800/60 hover:decoration-black transition">
           {children}
         </Link>
       );

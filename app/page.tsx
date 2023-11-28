@@ -3,21 +3,24 @@ import News from "@/components/News";
 import Testemonial from "@/components/Testemonial";
 import HeroTop from "@/components/HeroTop";
 import Test from "@/components/Test";
+import { HoverImageLinks } from "@/components/Links";
 import ToursPosts from "@/components/ToursPosts";
 import Stats from "@/components/Stats";
 import Experience from "@/components/Experience";
+import ShuffleHero from "@/components/Heros";
 
 export default async function Home() {
   return (
     <>
       <div className="mx-auto ">
-        <HeroTop />
+        <ShuffleHero />
         <div className=" text-center mt-11 p-22 w-4/6 mx-auto">
           <h1 className=" text-gray-500 font-bold tracking-widest p-7">
             All You Need To Know
           </h1>
           <Test />
           <div className="divider"></div>
+          <HeroTop />
         </div>
         <div>
           <Experience />
@@ -57,6 +60,9 @@ export default async function Home() {
               <div className="divider"></div>
             </div>
           </div>
+        </div>
+        <div>
+          <HoverImageLinks />
         </div>
         <Stats />
         <div className="divider"></div>

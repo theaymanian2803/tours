@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponent } from "@/components/RichTextComponent";
 import urlFor from "@/sanity/sanity-utils";
+import Buttons from "@/components/Buttons";
 
 type Props = {
   params: {
@@ -28,9 +29,7 @@ async function Post({ params }: Props) {
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
           <p className="text-lg text-center">{post.slug}</p>
-          <button className="mt-4 px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">
-            Enquire Now
-          </button>
+          <Buttons text="book NOW" />
           <div className="  bg-slate-400 h-9 absolute top=10"></div>
         </div>
       </div>

@@ -61,8 +61,8 @@ const BannerSlider: React.FC = () => {
               fill
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 w-full  md:bottom-[150px]  ">
-              <h2 className="text-2xl line-clamp-3 bg-orange-500 p-10 w-2/4 opacity-95 shadow-lg  text-center font-semibold capitalize text-black rounded-2xl mb-5">
+            <div className="absolute inset-0 w-full top-[200px]  md:p-10 ">
+              <h2 className="text-2xl line-clamp-3 bg-orange-500/60 p-10   shadow-lg  text-center font-semibold capitalize text-black mb-5">
                 {slide.caption}
               </h2>
               <br />
@@ -70,12 +70,12 @@ const BannerSlider: React.FC = () => {
           </div>
         ))}
         <button
-          className="absolute left-0 top-15 transform -translate-y-1/2 text-white bg-orange-500 px-4 py-2 rounded-r-md"
+          className="absolute hidden md:block left-0 top-15 transform -translate-y-1/2 text-white bg-orange-500 px-4 py-2 rounded-r-md"
           onClick={prevSlide}>
           Previous
         </button>
         <button
-          className="absolute right-0 top-15 transform -translate-y-1/2 text-white bg-orange-500 px-4 py-2 rounded-l-md"
+          className="absolute hidden md:block right-0 top-15 transform -translate-y-1/2 text-white bg-orange-500 px-4 py-2 rounded-l-md"
           onClick={nextSlide}>
           Next
         </button>

@@ -28,7 +28,7 @@ export async function getProjects(): Promise<Posts[]> {
       "mainImage" : mainImage.asset->url,
     }`;
 
-  return client.fetch(query);
+  return client.fetch(query, { next: { revalidate: 60 } });
 }
 
 export async function getProject(slug: string): Promise<Posts> {
@@ -43,9 +43,8 @@ export async function getProject(slug: string): Promise<Posts> {
       "mainImage" : mainImage.asset->url,
     }`;
 
-  return client.fetch(query, { slug }, { next: { revalidate: 60 } });
+  return client.fetch(query, { slug });
 }
 
-    // { next: { revalidate: 10 } }
-  
+   
 
